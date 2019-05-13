@@ -1,0 +1,30 @@
+RewriteEngine On
+
+RewriteRule Dashboard home.php
+
+RewriteRule Kategori-tambah kategori.php
+RewriteRule Data-kategori kategori_edit.php
+
+RewriteRule Berita-tambah berita.php
+RewriteRule Data-berita berita_edit.php
+
+RewriteRule Halaman-profil profil.php
+RewriteRule Halaman-PPDS ppds.php
+RewriteRule Halaman-Mahasiswa mahasiswa.php
+RewriteRule Halaman-IKA ika.php
+
+RewriteRule Sambutan sambutan.php
+RewriteRule Pengumuman pengumuman.php
+RewriteRule Tambah-pengumuman ins_peng.php
+
+RewriteRule Berita-([0-9]+)-(.*).html edit_berita.php?id_berita=$1 [L]
+RewriteRule Kategori-([0-9]+)-(.*).html edit_kategori.php?id_kategori=$1 [L]
+
+RewriteRule Profil-([0-9]+)-(.*).html edit_vimi.php?id_vm=$1 [L]
+RewriteRule PPDS-([0-9]+)-(.*).html edit_ppds.php?id_pds=$1 [L]
+RewriteRule Mahasiswa-([0-9]+)-(.*).html edit_mahasiswa.php?id_mhs=$1 [L]
+RewriteRule ilmu-kesehatan-anak-([0-9]+)-(.*).html edit_ika.php?id_ika=$1 [L]
+
+RewriteRule Pengumuman-([0-9]+)-(.*).html edit_peng.php?id_peng=$1 [L]
+RewriteRule Sambutan-([0-9]+).html edit_sambutan.php?id=$1 [L]
+

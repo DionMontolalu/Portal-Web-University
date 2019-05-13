@@ -1,0 +1,36 @@
+<div id="hitungmundur"></div>
+<script>
+Hitung();
+function Hitung()
+{
+tahun = 2017;
+bulan = 03;
+hari = 19;
+jam = 22;
+menit = 04;
+detik = 00;
+
+setTimeout(function()
+{
+tglTarget = new Date(tahun, (bulan - 1), hari, jam, menit, detik, 00);
+tglSkrg = new Date();
+tglSkrg = new Date(tglSkrg.getFullYear(), tglSkrg.getMonth(), tglSkrg.getDate(), tglSkrg.getHours(), tglSkrg.getMinutes(), tglSkrg.getSeconds(), 00, 00);
+var sisaHari = parseInt((tglTarget-tglSkrg)/86400000);
+var sisaJam = parseInt((tglTarget-tglSkrg)/3600000);
+var sisaMenit = parseInt((tglTarget-tglSkrg)/60000);
+var sisaDetik = parseInt((tglTarget-tglSkrg)/1000);
+detik = sisaMenit*60;
+detik = sisaDetik-detik;
+menit = sisaJam*60;
+menit = sisaMenit-menit;
+jam = sisaHari*24;
+jam = (sisaJam-jam) < 0 ? 0 : sisaJam-jam;
+hari = sisaHari;
+mulaiHitung(hari,jam, menit,detik,tahun);
+}, 1000);
+}
+function mulaiHitung(hari, jam, menit, detik, tahun){
+document.getElementById("hitungmundur").innerHTML=hari+" Hari, "+jam+" Jam, "+menit+" Menit, "+detik+" Detik Menuju 1 Tahun mazbhenks.com ";
+Hitung();
+}
+</script>
